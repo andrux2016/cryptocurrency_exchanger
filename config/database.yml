@@ -7,14 +7,14 @@ default: &default
 
 development:
   <<: *default
-  database: rails5base_development
+  database: cryptocurrency_exchanger_development
 
 test:
   <<: *default
-  database: rails5base_test
+  database: cryptocurrency_exchanger_test
 
 production:
   <<: *default
-  database: rails5base_production
-  username: rails5base
+  database: cryptocurrency_exchanger_production
+  username: cryptocurrency_exchanger
   password: <%= ENV['RAILS_BASE_DATABASE_PASSWORD'] %>
