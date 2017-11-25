@@ -5,5 +5,5 @@ ul.navbar-nav
     .dropdown-menu aria-labelledby='user-nav-toggle'
       = link_to t('.profile'), edit_user_registration_path, class: 'dropdown-item'
       .dropdown-divider
-      = link_to t('.logout'), user_session_path, class: 'dropdown-item', method: :delete
+      = link_to t('.logout'), destroy_user_session_path, class: 'dropdown-item', method: :delete
 

@@ -2,12 +2,18 @@ version: '3'
 services:
   db:
     image: postgres
+    volumes:
+      - ./tmp/db_data:/var/lib/postgresql
   web:
     build: .
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
       - .:/cryptocurrency_exchanger
+      - ./.bundle:/bundle
     ports:
       - "3000:3000"
     depends_on:
       - db
+volumes:
+  bundle:
+    driver: local
