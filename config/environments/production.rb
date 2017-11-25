@@ -94,7 +94,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'https://cryptocurrency-exchanger.herokuapp.com/' }
+  config.action_mailer.default_url_options = { host: Figaro.url_host }
   
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -103,7 +103,7 @@ Rails.application.configure do
     authentication:       :plain,
     user_name:            ENV['SENDGRID_USERNAME'],
     password:             ENV['SENDGRID_PASSWORD'],
-    domain:               'cryptocurrency-exchanger.herokuapp.com',
+    domain:               Figaro.env.url_host,
     enable_starttls_auto: true
   }
 end

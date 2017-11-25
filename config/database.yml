@@ -17,5 +17,5 @@ test:
 production:
   <<: *default
   database: cryptocurrency_exchanger_production
-  username: cryptocurrency_exchanger
-  password: <%= ENV['RAILS_BASE_DATABASE_PASSWORD'] %>
+  username: <%= ENV['DB_USER_NAME']
+  password: <%= ENV['DB_PASSWORD'] %>
