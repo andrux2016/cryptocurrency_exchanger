@@ -1,0 +1,6 @@
+ja:
+  activerecord:
+    attributes:
+      account:
+        currency: 通貨
+        address: アドレス

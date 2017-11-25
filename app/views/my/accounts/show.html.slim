@@ -1,0 +1,11 @@
+dl.dl-horizontal
+  dt User
+  dd = @account.user
+  dt Currency
+  dd = @account.currency
+  dt Address
+  dd = @account.address
+
+= link_to 'Edit', edit_account_path(@account)
+=<> '|'
+= link_to 'Back', accounts_path

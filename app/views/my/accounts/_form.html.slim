@@ -1,0 +1,8 @@
+= bootstrap_form_for @account do |f|
+  = f.error_summary
+
+  = f.text_field :user
+  = f.text_field :currency
+  = f.text_field :address
+  = f.form_group do
+    = f.submit class: 'btn btn-primary'

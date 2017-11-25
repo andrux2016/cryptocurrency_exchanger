@@ -1,0 +1,16 @@
+h1 = t('.page_title')
+
+table.table
+  thead
+    tr
+      th = Account.human_attribute_name :currency
+      th = Account.human_attribute_name :address
+      th
+
+  tbody
+    - @accounts.each do |account|
+      tr
+        td = account.currency
+        td = account.address
+
+= paginate @accounts

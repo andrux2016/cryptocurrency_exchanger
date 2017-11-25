@@ -5,5 +5,6 @@ ja:
       or: または
       new_user: ユーザ登録
     user_navbar:
+      accounts: 口座一覧
       profile: プロフィール編集
       logout: ログアウト
