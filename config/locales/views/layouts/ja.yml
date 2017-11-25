@@ -1,6 +1,7 @@
 ja:
   layouts:
     navbar:
+      home: ホーム
       login: ログイン
       or: または
       new_user: ユーザ登録

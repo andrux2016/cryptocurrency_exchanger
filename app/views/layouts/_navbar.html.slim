@@ -5,10 +5,9 @@ nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
       span.navbar-toggler-icon
     #navbars.collapse.navbar-collapse
       ul.navbar-nav.mr-auto
-        li.nav-item.active
-          a.nav-link href="/"
-            | Home
-            span.sr-only (current)
+        = active_link_to root_path, active: [['static_pages'], ['top']], class: 'nav-link', wrap_tag: :li, wrap_class: 'nav-item' do
+          = t('.home')
+          span.sr-only (current)
       - if user_signed_in?
         = render 'layouts/user_navbar'
       - else
